@@ -50,13 +50,13 @@ DELETE /products/_doc/1
 ## The Importance of CRUD Operations
 Mastering CRUD operations in Elasticsearch is crucial for:
 
-**Ingesting Fresh Data:** Quickly index new information into your system.
+- **Ingesting Fresh Data:** Quickly index new information into your system.
 
-**Efficient Data Retrieval:** Leverage powerful search capabilities to fetch desired records.
+- **Efficient Data Retrieval:** Leverage powerful search capabilities to fetch desired records.
 
-**Seamless Data Updates:** Keep your indexed data current with minimal downtime.
+- **Seamless Data Updates:** Keep your indexed data current with minimal downtime.
 
-**Data Cleanup:** Remove outdated or irrelevant records to maintain optimal performance.
+- **Data Cleanup:** Remove outdated or irrelevant records to maintain optimal performance.
 
 > Furthermore, you can perform **cluster-wide operations** by making `GET` calls to Elasticsearch, expanding your management capabilities.
 
