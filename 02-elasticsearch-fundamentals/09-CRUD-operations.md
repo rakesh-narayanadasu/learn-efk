@@ -5,7 +5,7 @@ CRUD represents the core operations you’ll perform when managing data in Elast
 ## Create:
 Add new documents to an index. When a document is created, you provide its data fields and corresponding values. Elasticsearch then indexes this data, making it readily searchable.
 
-```json
+```
 POST /products/_doc/1
 {
   "name": "Wireless Headphones",
@@ -18,7 +18,7 @@ POST /products/_doc/1
 ## Read:
 Retrieve or search for documents within an index. Elasticsearch’s robust search functionality allows you to query data using various criteria, ensuring you get accurate results.
 
-```json
+```
 GET /products/_search
 {
   "query": {
@@ -30,7 +30,7 @@ GET /products/_search
 ## Update:
 Modify existing documents in an index. This operation enables you to adjust field values, introduce new fields, or update multiple records at once. Updated documents are **re-indexed** to maintain search precision.
 
-```json
+```
 POST /products/_update/1
 {
   "doc": {
@@ -43,7 +43,7 @@ POST /products/_update/1
 ## Delete:
 Remove documents from an index. You can delete individual records or perform bulk deletions based on specific criteria.
 
-```json
+```
 DELETE /products/_doc/1
 ```
 
@@ -80,7 +80,7 @@ When working with large datasets, consider using **bulk APIs** in Elasticsearch 
 
 To retrieve all documents from Elasticsearch, run the following command:
 
-```json
+```
 GET _search
 {
   "query": {
@@ -92,13 +92,13 @@ GET _search
 Before executing any modifications, it is advisable to verify the health of your Elasticsearch cluster.
 
 Run this GET request to check the cluster's status:
-```json
+```
 GET /_cluster/health
 ```
 
 A successful response (HTTP status 200) returns details similar to the example below:
 
-```json
+```
 {
   "cluster_name": "elasticsearch",
   "status": "yellow",
@@ -122,14 +122,14 @@ A successful response (HTTP status 200) returns details similar to the example b
 
 ## Creating an Index
 To create a new index named "products", execute the following PUT command:
-```json
+```
 PUT /products
 ```
 On successful execution, you will receive an acknowledgement confirming the creation of the "products" index.
 
 ## Adding a Document
 Insert a new document into the "products" index using the POST command. The example below adds a product document with multiple properties:
-```json
+```
 POST /products/_doc/1
 {
   "product_id": 67890,
@@ -143,11 +143,11 @@ POST /products/_doc/1
 
 ## Retrieving the Document
 To confirm that the document has been added, retrieve it with the following GET command:
-```json
+```
 GET /products/_doc/1
 ```
 You can also search for the document by matching specific fields. For example, to find a product with "sweater" in its name, use:
-```json
+```
 GET /products/_search
 {
   "query": {
@@ -162,7 +162,7 @@ In the response, note that the document data is stored under the `_source` key, 
 ## Updating a Document
 ### Incorrect Approach Using PUT
 Attempting to update a document using the PUT command may result in issues, as it replaces the entire document rather than updating specific fields. For example:
-```json
+```
 PUT /products/_doc/1
 {
   "price": 129.99
@@ -172,7 +172,7 @@ This approach can trigger a parsing exception (HTTP status 400) if not formatted
 
 ### Correct Approach Using POST with _update
 To modify only specific fields without replacing the entire document, use the POST command with the `_update` endpoint. First, ensure your document exists:
-```json
+```
 POST /products/_doc/1
 {
   "product_id": 67890,
@@ -184,7 +184,7 @@ POST /products/_doc/1
 }
 ```
 Now, update specific fields using:
-```json
+```
 POST /products/_doc/1/_update
 {
   "doc": {
@@ -194,7 +194,7 @@ POST /products/_doc/1/_update
 }
 ```
 After executing this update command, verify the changes by retrieving the document again:
-```json
+```
 GET /products/_doc/1
 ```
 
@@ -202,17 +202,17 @@ GET /products/_doc/1
 
 ## Deleting Documents and Indices
 To delete a single document from the index:
-```json
+```
 DELETE /products/_doc/1
 ```
 If you prefer to delete the entire index, execute:
-```json
+```
 DELETE /products/
 ```
 
 ## Below is a consolidated list of essential Elasticsearch CRUD commands:
 
-```json
+```
 GET _search
 {
   "query": {
