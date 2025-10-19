@@ -123,7 +123,7 @@ Once the pod shows as **Running**, verify your services:
 kubectl get svc
 ```
 
-## Deploy Kibana
+## Deploy Fluentbit
 
 ```
 kubectl apply -f fluent-bit-*
