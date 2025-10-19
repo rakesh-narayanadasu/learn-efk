@@ -39,7 +39,7 @@ git clone https://github.com/rakesh-narayanadasu/learn-efk.git
 Change to the Elasticsearch deployment directory:
 
 ```bash
-cd ~/learn-efk/05-deploy-elasticsearch-on-k8s
+cd ~/learn-efk/efk-installation
 ```
 
 ---
