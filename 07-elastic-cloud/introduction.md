@@ -11,13 +11,11 @@ Elastic Cloud also offers seamless integration with **Kibana**, a powerful data 
 - Perform advanced analyses directly with your Elasticsearch data
 
 
-
 ## Key Benefits
 
 - **Fully managed Elasticsearch clusters**
 - **Seamless Kibana integration** for data visualization and analysis
 - **Automated backups, updates, scaling, and monitoring**
-
 
 
 ## Security & Compliance
@@ -29,7 +27,6 @@ Security is a top priority in Elastic Cloud. The platform includes:
 - **Compliance with standards** such as **GDPR** and **HIPAA**
 
 These features ensure your data remains **secure** and **regulatory-compliant**.
-
 
 
 ## Multi-Cloud Deployment
